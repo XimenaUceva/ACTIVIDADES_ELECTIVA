@@ -1,0 +1,103 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 7
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Temperatura",
+						"value": "datasources[\"unidadcentral\"][\"Temperatura\"]",
+						"units": "grados",
+						"min_value": "10",
+						"max_value": "100"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Temperatura",
+						"value": [
+							"datasources[\"unidadcentral\"][\"Temperatura\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 7
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Humedad",
+						"value": "datasources[\"unidadcentral\"][\"Humedad\"]",
+						"units": "%H",
+						"min_value": "10",
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 15
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Humedad",
+						"value": [
+							"datasources[\"unidadcentral\"][\"Humedad\"]"
+						]
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "unidadcentral",
+			"type": "dweet_io",
+			"settings": {
+				"thing_id": "unidadcentral"
+			}
+		}
+	],
+	"columns": 3
+}
